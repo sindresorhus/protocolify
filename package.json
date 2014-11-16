@@ -1,0 +1,38 @@
+{
+  "name": "protocolify",
+  "version": "0.0.0",
+  "description": "Prepend http:// to humanized URLs like todomvc.com and file:// to file paths",
+  "license": "MIT",
+  "repository": "sindresorhus/protocolify",
+  "author": {
+    "name": "Sindre Sorhus",
+    "email": "sindresorhus@gmail.com",
+    "url": "http://sindresorhus.com"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "node test.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "protocol",
+    "scheme",
+    "url",
+    "uri",
+    "prepend",
+    "http",
+    "file",
+    "path"
+  ],
+  "dependencies": {
+    "file-url": "^1.0.0",
+    "prepend-http": "^1.0.0"
+  },
+  "devDependencies": {
+    "ava": "0.0.4"
+  }
+}
