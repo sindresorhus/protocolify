@@ -30,6 +30,7 @@
   ],
   "dependencies": {
     "file-url": "^1.0.0",
+    "path-exists": "^1.0.0",
     "prepend-http": "^1.0.0"
   },
   "devDependencies": {
