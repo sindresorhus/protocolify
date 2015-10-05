@@ -7,7 +7,7 @@ Useful when you want to accept either a local file or URL as argument in your CL
 
 ## Install
 
-```sh
+```
 $ npm install --save protocolify
 ```
 
@@ -15,20 +15,20 @@ $ npm install --save protocolify
 ## Usage
 
 ```js
-var protocolify = require('protocolify');
+const protocolify = require('protocolify');
 
 protocolify('todomvc.com');
-//=> http://todomvc.com
+//=> 'http://todomvc.com'
 
 protocolify('localhost');
-//=> http://localhost
+//=> 'http://localhost'
 
 protocolify('http://todomvc.com');
-//=> http://todomvc.com
+//=> 'http://todomvc.com'
 
 // if it exists on disk it will be interpreted as a file and not an URL
 protocolify('index.js');
-//=> file:///Users/sindresorhus/dev/protocolify/index.js
+//=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
 
 
