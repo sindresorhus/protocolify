@@ -1,9 +1,7 @@
-'use strict';
-var test = require('ava');
-var protocolify = require('./');
+import test from 'ava';
+import fn from './';
 
-test(function (t) {
-	t.assert(protocolify('todomvc.com') === 'http://todomvc.com');
-	t.assert(/file:\/\/.*index\.js/.test(protocolify('index.js')));
-	t.end();
+test(t => {
+	t.is(fn('todomvc.com'), 'http://todomvc.com');
+	t.true(/file:\/\/.*index\.js/.test(fn('index.js')));
 });
