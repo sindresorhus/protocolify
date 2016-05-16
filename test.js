@@ -1,10 +1,10 @@
 import test from 'ava';
-import fn from './';
+import m from './';
 
 test(t => {
-	t.is(fn('todomvc.com'), 'http://todomvc.com');
-	t.true(/file:\/\/.*index\.js/.test(fn('index.js')));
+	t.is(m('todomvc.com'), 'http://todomvc.com');
+	t.true(/file:\/\/.*index\.js/.test(m('index.js')));
 
 	const dataURL = 'data:image/png;base64,iVBORw0KGgo=';
-	t.is(fn(dataURL), dataURL);
+	t.is(m(dataURL), dataURL);
 });

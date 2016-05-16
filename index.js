@@ -5,7 +5,7 @@ var pathExists = require('path-exists');
 
 module.exports = function (url) {
 	if (typeof url !== 'string') {
-		throw new TypeError('Expected a string');
+		throw new TypeError('Expected a string, got ' + typeof url);
 	}
 
 	return pathExists.sync(url) ? fileUrl(url) : prependHttp(url);
