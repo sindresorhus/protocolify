@@ -1,6 +1,6 @@
 {
   "name": "protocolify",
-  "version": "1.0.3",
+  "version": "2.0.0",
   "description": "Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths",
   "license": "MIT",
   "repository": "sindresorhus/protocolify",
