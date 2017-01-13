@@ -1,12 +1,12 @@
 'use strict';
-var fileUrl = require('file-url');
-var prependHttp = require('prepend-http');
-var pathExists = require('path-exists');
+const fs = require('fs');
+const fileUrl = require('file-url');
+const prependHttp = require('prepend-http');
 
 module.exports = function (url) {
 	if (typeof url !== 'string') {
-		throw new TypeError('Expected a string, got ' + typeof url);
+		throw new TypeError(`Expected a string, got ${typeof url}`);
 	}
 
-	return pathExists.sync(url) ? fileUrl(url) : prependHttp(url);
+	return fs.existsSync(url) ? fileUrl(url) : prependHttp(url);
 };

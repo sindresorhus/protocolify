@@ -10,7 +10,7 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "scripts": {
     "test": "xo && ava"
@@ -29,8 +29,7 @@
     "path"
   ],
   "dependencies": {
-    "file-url": "^1.0.0",
-    "path-exists": "^2.0.0",
+    "file-url": "^2.0.0",
     "prepend-http": "^1.0.4"
   },
   "devDependencies": {
