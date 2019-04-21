@@ -26,7 +26,7 @@ protocolify('localhost');
 protocolify('http://todomvc.com');
 //=> 'http://todomvc.com'
 
-// if it exists on disk it will be interpreted as a file and not an URL
+// If it exists on disk, it will be interpreted as a file and not a URL
 protocolify('index.js');
 //=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
