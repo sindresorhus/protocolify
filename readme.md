@@ -8,7 +8,7 @@ Useful when you want to accept either a local file or URL as argument in your CL
 ## Install
 
 ```
-$ npm install --save protocolify
+$ npm install protocolify
 ```
 
 
@@ -20,6 +20,9 @@ const protocolify = require('protocolify');
 protocolify('todomvc.com');
 //=> 'http://todomvc.com'
 
+protocolify('todomvc.com', {https: true});
+//=> 'https://todomvc.com'
+
 protocolify('localhost');
 //=> 'http://localhost'
 
@@ -30,6 +33,28 @@ protocolify('http://todomvc.com');
 protocolify('index.js');
 //=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
+
+
+## API
+
+### protocolify(urlOrFilePath, [options])
+
+#### urlOrFilePath
+
+Type: `string`
+
+URL to prepend `http://` or file path to prepend `file://`.
+
+#### options
+
+Type: `object`
+
+##### https
+
+Type: `boolean`<br>
+Default: `false`
+
+Prepend `https://` instead of `http://` to URLs.
 
 
 ## License

@@ -1,39 +1,41 @@
 {
-  "name": "protocolify",
-  "version": "2.0.0",
-  "description": "Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths",
-  "license": "MIT",
-  "repository": "sindresorhus/protocolify",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=4"
-  },
-  "scripts": {
-    "test": "xo && ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "protocol",
-    "scheme",
-    "url",
-    "uri",
-    "prepend",
-    "http",
-    "file",
-    "path"
-  ],
-  "dependencies": {
-    "file-url": "^2.0.0",
-    "prepend-http": "^1.0.4"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  }
+	"name": "protocolify",
+	"version": "2.0.0",
+	"description": "Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths",
+	"license": "MIT",
+	"repository": "sindresorhus/protocolify",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=8"
+	},
+	"scripts": {
+		"test": "xo && ava && tsd"
+	},
+	"files": [
+		"index.js",
+		"index.d.ts"
+	],
+	"keywords": [
+		"protocol",
+		"scheme",
+		"url",
+		"uri",
+		"prepend",
+		"http",
+		"file",
+		"path"
+	],
+	"dependencies": {
+		"file-url": "^3.0.0",
+		"prepend-http": "^2.0.0"
+	},
+	"devDependencies": {
+		"ava": "^1.4.1",
+		"tsd": "^0.7.2",
+		"xo": "^0.24.0"
+	}
 }

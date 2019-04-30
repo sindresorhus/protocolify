@@ -1,10 +1,11 @@
 import test from 'ava';
-import m from './';
+import protocolify from '.';
 
-test(t => {
-	t.is(m('todomvc.com'), 'http://todomvc.com');
-	t.true(/file:\/\/.*index\.js/.test(m('index.js')));
+test('main', t => {
+	t.is(protocolify('todomvc.com'), 'http://todomvc.com');
+	t.is(protocolify('todomvc.com', {https: true}), 'https://todomvc.com');
+	t.true(/file:\/\/.*index\.js/.test(protocolify('index.js')));
 
 	const dataURL = 'data:image/png;base64,iVBORw0KGgo=';
-	t.is(m(dataURL), dataURL);
+	t.is(protocolify(dataURL), dataURL);
 });
