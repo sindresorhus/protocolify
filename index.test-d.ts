@@ -3,5 +3,5 @@ import protocolify = require('.');
 
 const options: protocolify.Options = {};
 
-expectType<string>(protocolify('todomvc.com'));
-expectType<string>(protocolify('todomvc.com', {https: true}));
+expectType<string>(protocolify('sindresorhus.com'));
+expectType<string>(protocolify('sindresorhus.com', {https: false}));

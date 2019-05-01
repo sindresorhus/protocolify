@@ -1,6 +1,6 @@
 # protocolify [![Build Status](https://travis-ci.org/sindresorhus/protocolify.svg?branch=master)](https://travis-ci.org/sindresorhus/protocolify)
 
-> Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths
+> Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths
 
 Useful when you want to accept either a local file or URL as argument in your CLI app.
 
@@ -17,17 +17,14 @@ $ npm install protocolify
 ```js
 const protocolify = require('protocolify');
 
-protocolify('todomvc.com');
-//=> 'http://todomvc.com'
+protocolify('sindresorhus.com');
+//=> 'https://sindresorhus.com'
 
-protocolify('todomvc.com', {https: true});
-//=> 'https://todomvc.com'
-
-protocolify('localhost');
+protocolify('localhost', {https: false});
 //=> 'http://localhost'
 
-protocolify('http://todomvc.com');
-//=> 'http://todomvc.com'
+protocolify('https://sindresorhus.com');
+//=> 'https://sindresorhus.com'
 
 // If it exists on disk, it will be interpreted as a file and not a URL
 protocolify('index.js');
@@ -43,7 +40,7 @@ protocolify('index.js');
 
 Type: `string`
 
-URL to prepend `http://` or file path to prepend `file://`.
+URL to prepend `https://` or file path to prepend `file://`.
 
 #### options
 
@@ -52,7 +49,7 @@ Type: `object`
 ##### https
 
 Type: `boolean`<br>
-Default: `false`
+Default: `true`
 
 Prepend `https://` instead of `http://` to URLs.
 

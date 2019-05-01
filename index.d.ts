@@ -3,38 +3,35 @@ declare namespace protocolify {
 		/**
 		 * Prepend `https://` instead of `http://` to URLs.
 		 *
-		 * @default false
+		 * @default true
 		 */
 		readonly https?: boolean;
 	}
 }
 
 /**
-Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths.
+Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths.
 
-@param urlOrFilePath - URL to prepend `http://` or file path to prepend `file://`.
+@param urlOrFilePath - URL to prepend `https://` or file path to prepend `file://`.
 
 @example
 ```
 import protocolify = require('protocolify');
 
-protocolify('todomvc.com');
-//=> 'http://todomvc.com'
+protocolify('sindresorhus.com');
+//=> 'https://sindresorhus.com'
 
-protocolify('todomvc.com', {https: true});
-//=> 'https://todomvc.com'
-
-protocolify('localhost');
+protocolify('localhost', {https: false});
 //=> 'http://localhost'
 
-protocolify('http://todomvc.com');
-//=> 'http://todomvc.com'
+protocolify('https://sindresorhus.com');
+//=> 'https://sindresorhus.com'
 
 // If it exists on disk, it will be interpreted as a file and not a URL
 protocolify('index.js');
 //=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
 */
-declare function protocolify(url: string, options?: protocolify.Options): string;
+declare function protocolify(urlOrFilePath: string, options?: protocolify.Options): string;
 
 export = protocolify;

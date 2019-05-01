@@ -5,7 +5,7 @@ const prependHttp = require('prepend-http');
 
 module.exports = (urlOrFilePath, options) => {
 	if (typeof urlOrFilePath !== 'string') {
-		throw new TypeError(`Expected a string, got ${typeof urlOrFilePath}`);
+		throw new TypeError(`Expected a \`string\`, got \`${typeof urlOrFilePath}\``);
 	}
 
 	return fs.existsSync(urlOrFilePath) ? fileUrl(urlOrFilePath) : prependHttp(urlOrFilePath, options);

@@ -1,7 +1,7 @@
 {
 	"name": "protocolify",
 	"version": "2.0.0",
-	"description": "Prepend `http://` to humanized URLs like `todomvc.com` and `file://` to file paths",
+	"description": "Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths",
 	"license": "MIT",
 	"repository": "sindresorhus/protocolify",
 	"author": {
@@ -31,7 +31,7 @@
 	],
 	"dependencies": {
 		"file-url": "^3.0.0",
-		"prepend-http": "^2.0.0"
+		"prepend-http": "^3.0.0"
 	},
 	"devDependencies": {
 		"ava": "^1.4.1",
