@@ -1,4 +1,4 @@
-# protocolify [![Build Status](https://travis-ci.org/sindresorhus/protocolify.svg?branch=master)](https://travis-ci.org/sindresorhus/protocolify)
+# protocolify
 
 > Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths
 
