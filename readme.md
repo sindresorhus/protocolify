@@ -4,18 +4,16 @@
 
 Useful when you want to accept either a local file or URL as argument in your CLI app.
 
-
 ## Install
 
 ```
 $ npm install protocolify
 ```
 
-
 ## Usage
 
 ```js
-const protocolify = require('protocolify');
+import protocolify from 'protocolify';
 
 protocolify('sindresorhus.com');
 //=> 'https://sindresorhus.com'
@@ -31,16 +29,15 @@ protocolify('index.js');
 //=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
 
-
 ## API
 
-### protocolify(urlOrFilePath, [options])
+### protocolify(urlOrFilePath, options?)
 
 #### urlOrFilePath
 
 Type: `string`
 
-URL to prepend `https://` or file path to prepend `file://`.
+The URL to prepend `https://` or file path to prepend `file://`.
 
 #### options
 
@@ -48,12 +45,7 @@ Type: `object`
 
 ##### https
 
-Type: `boolean`<br>
+Type: `boolean`\
 Default: `true`
 
 Prepend `https://` instead of `http://` to URLs.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)

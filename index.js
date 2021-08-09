@@ -1,12 +1,11 @@
-'use strict';
-const fs = require('fs');
-const fileUrl = require('file-url');
-const prependHttp = require('prepend-http');
+import fs from 'node:fs';
+import fileUrl from 'file-url';
+import prependHttp from 'prepend-http';
 
-module.exports = (urlOrFilePath, options) => {
+export default function protocolify(urlOrFilePath, options) {
 	if (typeof urlOrFilePath !== 'string') {
 		throw new TypeError(`Expected a \`string\`, got \`${typeof urlOrFilePath}\``);
 	}
 
 	return fs.existsSync(urlOrFilePath) ? fileUrl(urlOrFilePath) : prependHttp(urlOrFilePath, options);
-};
+}

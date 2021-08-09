@@ -1,22 +1,20 @@
-declare namespace protocolify {
-	interface Options {
-		/**
-		 * Prepend `https://` instead of `http://` to URLs.
-		 *
-		 * @default true
-		 */
-		readonly https?: boolean;
-	}
+export interface Options {
+	/**
+	Prepend `https://` instead of `http://` to URLs.
+
+	@default true
+	*/
+	readonly https?: boolean;
 }
 
 /**
 Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths.
 
-@param urlOrFilePath - URL to prepend `https://` or file path to prepend `file://`.
+@param urlOrFilePath - The URL to prepend `https://` or file path to prepend `file://`.
 
 @example
 ```
-import protocolify = require('protocolify');
+import protocolify from 'protocolify';
 
 protocolify('sindresorhus.com');
 //=> 'https://sindresorhus.com'
@@ -32,6 +30,4 @@ protocolify('index.js');
 //=> 'file:///Users/sindresorhus/dev/protocolify/index.js'
 ```
 */
-declare function protocolify(urlOrFilePath: string, options?: protocolify.Options): string;
-
-export = protocolify;
+export default function protocolify(urlOrFilePath: string, options?: Options): string;

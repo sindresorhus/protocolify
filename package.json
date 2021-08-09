@@ -4,13 +4,16 @@
 	"description": "Prepend `https://` to humanized URLs like `sindresorhus.com` and `file://` to file paths",
 	"license": "MIT",
 	"repository": "sindresorhus/protocolify",
+	"funding": "https://github.com/sponsors/sindresorhus",
 	"author": {
 		"name": "Sindre Sorhus",
 		"email": "sindresorhus@gmail.com",
-		"url": "sindresorhus.com"
+		"url": "https://sindresorhus.com"
 	},
+	"type": "module",
+	"exports": "./index.js",
 	"engines": {
-		"node": ">=8"
+		"node": "^12.20.0 || ^14.13.1 || >=16.0.0"
 	},
 	"scripts": {
 		"test": "xo && ava && tsd"
@@ -30,12 +33,12 @@
 		"path"
 	],
 	"dependencies": {
-		"file-url": "^3.0.0",
-		"prepend-http": "^3.0.0"
+		"file-url": "^4.0.0",
+		"prepend-http": "^4.0.0"
 	},
 	"devDependencies": {
-		"ava": "^1.4.1",
-		"tsd": "^0.7.2",
-		"xo": "^0.24.0"
+		"ava": "^3.15.0",
+		"tsd": "^0.17.0",
+		"xo": "^0.44.0"
 	}
 }
